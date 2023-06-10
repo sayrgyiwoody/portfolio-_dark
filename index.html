@@ -233,7 +233,7 @@
   <script>
         ScrollReveal({
             reset:true,
-            distance : '60px',
+            distance: window.innerWidth < 768 ? '20px' : '60px',
             duration: 2500,
             delay:400,
         });
