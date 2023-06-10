@@ -232,7 +232,7 @@
 
   <script>
         ScrollReveal({
-            reset:true,
+            reset: window.innerWidth < 768 ? false : true,
             distance: window.innerWidth < 768 ? '20px' : '60px',
             duration: 2500,
             delay:400,
