@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./images/icon.png">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
 </head>
 <body>
     <div id="header">
@@ -39,11 +41,11 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="./images/phone-background_2.jpg" alt="">
+                    <img src="./images/waiyan.jpg" alt="">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Hello I'm Waiyan Tun. I'm passionate programming, and I'm 18 years old junior developer who still learning about modern programming.</p>
+                    <p class="sub-text">Hello I'm Waiyan Tun. I'm passionate programming, and I'm 18 years old junior developer who still learning about modern programming.</p>
                     
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -82,19 +84,19 @@
             <h1 class="sub-title">My Services</h1>
             <div class="services-list">
 
-                <div>
+                <div class="service">
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam aut sit, nihil temporibus ratione consequatur exercitationem? </p>
                     <a href="#">Learn more</a>
                 </div>
-                <div>
+                <div class="service">
                     <i class="fa-solid fa-crop-simple"></i>
                     <h2>UI/UX Design</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam aut sit, nihil temporibus ratione consequatur exercitationem? </p>
                     <a href="#">Learn more</a>
                 </div>
-                <div>
+                <div class="service">
                     <i class="fa-brands fa-app-store"></i>
                     <h2>App Design</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam aut sit, nihil temporibus ratione consequatur exercitationem? </p>
@@ -139,7 +141,7 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a href="" class="btn">See more</a>
     </div>
 </div>
 
@@ -227,5 +229,23 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+
+  <script>
+        ScrollReveal({
+            reset:true,
+            distance : '60px',
+            duration: 2500,
+            delay:400,
+        });
+
+        ScrollReveal().reveal('#header .header-text , #portfolio .sub-title, .about-col-1 , #services .sub-title',{delay:500 , origin : 'left'});
+        ScrollReveal().reveal('.about-col-2 , .sub-text, .contact-right',{delay:500 , origin : 'right'});
+        ScrollReveal().reveal('#header #sidemenu,.about-col-2 .sub-title ,.contact-left',{delay:500 , origin : 'top'});
+        ScrollReveal().reveal('.logo , #services .service' , {delay:600 , origin : 'bottom' ,interval : 200});
+        ScrollReveal().reveal('#portfolio .work' , {delay:600 , origin : 'right' ,interval : 200});
+        ScrollReveal().reveal('#portfolio .btn',{delay:600 , origin : 'bottom'});
+
+  </script>
+
 </body>
 </html>
