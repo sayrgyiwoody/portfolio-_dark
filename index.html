@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./images/icon.png">
     <script src="https://unpkg.com/scrollreveal"></script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1a1fdc0b72db9d16b59accdee09520148298455
 </head>
 <body>
     <div id="header">
@@ -181,6 +185,7 @@
 <script src="./app.js"></script>
     
   </script>
+<<<<<<< HEAD
 <script>
     ScrollReveal({
         reset:true,
@@ -197,6 +202,25 @@
     ScrollReveal().reveal('#portfolio .btn',{delay:600 , origin : 'bottom'});
 
 </script>
+=======
+
+  <script>
+        ScrollReveal({
+            reset: window.innerWidth < 768 ? false : true,
+            distance: window.innerWidth < 768 ? '20px' : '60px',
+            duration: 2500,
+            delay:400,
+        });
+
+        ScrollReveal().reveal('#header .header-text , #portfolio .sub-title, .about-col-1 , #services .sub-title',{delay:500 , origin : 'left'});
+        ScrollReveal().reveal('.about-col-2 , .sub-text, .contact-right',{delay:500 , origin : 'right'});
+        ScrollReveal().reveal('#header #sidemenu,.about-col-2 .sub-title ,.contact-left',{delay:500 , origin : 'top'});
+        ScrollReveal().reveal('.logo , #services .service' , {delay:600 , origin : 'bottom' ,interval : 200});
+        ScrollReveal().reveal('#portfolio .work' , {delay:600 , origin : 'right' ,interval : 200});
+        ScrollReveal().reveal('#portfolio .btn',{delay:600 , origin : 'bottom'});
+
+  </script>
+>>>>>>> d1a1fdc0b72db9d16b59accdee09520148298455
 
 </body>
 </html>
