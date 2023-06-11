@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./images/icon.png">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <div id="header">
@@ -39,11 +40,11 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="./images/phone-background_2.jpg" alt="">
+                    <img src="./images/waiyan.jpg" alt="">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Hello I'm Waiyan Tun. I'm passionate programming, and I'm 18 years old junior developer who still learning about modern programming.</p>
+                    <p class="sub-text">Hello I'm Waiyan Tun. I'm passionate programming, and I'm 18 years old junior developer who still learning about modern programming.</p>
                     
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -82,19 +83,19 @@
             <h1 class="sub-title">My Services</h1>
             <div class="services-list">
 
-                <div>
+                <div class="service">
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam aut sit, nihil temporibus ratione consequatur exercitationem? </p>
                     <a href="#">Learn more</a>
                 </div>
-                <div>
+                <div class="service">
                     <i class="fa-solid fa-crop-simple"></i>
                     <h2>UI/UX Design</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam aut sit, nihil temporibus ratione consequatur exercitationem? </p>
                     <a href="#">Learn more</a>
                 </div>
-                <div>
+                <div class="service">
                     <i class="fa-brands fa-app-store"></i>
                     <h2>App Design</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam aut sit, nihil temporibus ratione consequatur exercitationem? </p>
@@ -109,7 +110,7 @@
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <div class="work">
-                <img src="./images/work-1.png" >
+                <img src="./images/social_media.jpg" >
                 <div class="layer">
                     <h3>Social Media App</h3>
                     <p>The app connects you to the talented people around the world.
@@ -119,17 +120,7 @@
                 </div>
             </div>
             <div class="work">
-                <img src="./images/work-2.png" >
-                <div class="layer">
-                    <h3>Music App</h3>
-                    <p>The app connects you to the talented people around the world.
-                        Download it from play store.
-                    </p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="./images/work-3.jpg" >
+                <img src="./images/shopping_app.jpg" >
                 <div class="layer">
                     <h3>Online Shopping App</h3>
                     <p>The app connects you to the talented people around the world.
@@ -138,8 +129,18 @@
                     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
+            <div class="work">
+                <img src="./images/music_app.jpg" >
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>The app connects you to the talented people around the world.
+                        Download it from play store.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a href="" class="btn">See more</a>
     </div>
 </div>
 
@@ -154,9 +155,9 @@
                 <p><i class="fa-solid fa-phone"></i>09950214146</p>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=100017455754116" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://t.me/waiyanwoody"><i class="fa-brands fa-telegram" target="_blank"></i></a>
+                    <a href="https://www.instagram.com/woodywyt/"><i class="fa-brands fa-instagram" target="_blank"></i></a>
+                    <a href="https://www.github.com/sayrgyiwoody"><i class="fa-brands fa-github" target="_blank"></i></a>
                 </div>
                 <a href="./images/Waiyan Tun CV.pdf" target="_blank" download="WaiyanTun's CV form" class="btn btn2">Download CV</a>
             </div>
@@ -177,55 +178,25 @@
 </div>
 
 
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+<script src="./app.js"></script>
     
-    function opentab(tabname){
-        for(tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-    
-</script>
-
-<script>
-
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-200px";
-    }
-
-
-</script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx4zpPy_lKdVMLW7qk8ebOI4SpxcL6bPk2qyHHF53KDSJnlXkaZYvZlu-_Y2-dEL6pTsw/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
   </script>
+<script>
+    ScrollReveal({
+        reset:true,
+        distance: window.innerWidth < 768 ? '20px' : '60px',
+        duration: 2500,
+        delay:400,
+    });
+
+    ScrollReveal().reveal('#header .header-text , #portfolio .sub-title, .about-col-1 , #services .sub-title',{delay:500 , origin : 'left'});
+    ScrollReveal().reveal('.about-col-2 , .sub-text, .contact-right',{delay:500 , origin : 'right'});
+    ScrollReveal().reveal('#header #sidemenu,.about-col-2 .sub-title ,.contact-left',{delay:500 , origin : 'top'});
+    ScrollReveal().reveal('.logo , #services .service' , {delay:600 , origin : 'bottom' ,interval : 200});
+    ScrollReveal().reveal('#portfolio .work' , {delay:600 , origin : 'right' ,interval : 200});
+    ScrollReveal().reveal('#portfolio .btn',{delay:600 , origin : 'bottom'});
+
+</script>
+
 </body>
 </html>
